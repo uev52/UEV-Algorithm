@@ -52,7 +52,7 @@ pc= input("Wat is uw postcode: ")
 wp= input("Waar woont u: ")
 tel= input("wat is uw telefoonnummer: ")
 ticketnr=[]
-ID=int(input("wat is uw passagier nummer: "))
+gn=input("Kies een gebruikersnaam: ")
 
 for x in range(0,9):
         ticketnr.append(str(r.randint(0,9)))
@@ -61,7 +61,12 @@ print(ticketnummer)
 cryptedpass= encrypt(ticketnummer)
 transfer = open('database.txt','a')
 transfer.write("voornaam: "+vn+", achternaam: "+an+", geboortedatum: "+gd+", geslacht: "+gs+", adres: "+addr+
-               ", postcode: "+pc+", woonplaats: "+wp+", telefoonnummer "+tel+", ticketnummer: "+str(cryptedpass)+"\n")
+               ", postcode: "+pc+", woonplaats: "+wp+", telefoonnummer "+tel+", nummer: "+str(cryptedpass)+"\n")
 transfer.close()
+
+#Thema: Broken Authentication
+#Soort: Reverse Engineering CTF
+#level: ervaren
+#Flag-token (2/3): EAMAW-216
 
 
